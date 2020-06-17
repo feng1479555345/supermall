@@ -33,13 +33,13 @@ export default {
         'new':{page:0,list:[]},
         'sell':{page:0,list:[]}
       },
-      currentIndex:'pop'
+      currentType:'pop'
     }
   },
   computed: {
     showPro(){
       //一定不要忘记加 this
-      return this.goods[this.currentIndex].list
+      return this.goods[this.currentType].list
     }
   },
   components: {
@@ -64,13 +64,13 @@ export default {
     tabClick(index){
       switch(index){
         case 0:
-          this.currentIndex = 'pop'
+          this.currentType = 'pop'
           break
         case 1:
-          this.currentIndex = 'new'
+          this.currentType = 'new'
           break
         case 2:
-          this.currentIndex = 'sell'
+          this.currentType = 'sell'
           break
       }
     },
